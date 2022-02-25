@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .personalize_body{
+                position: fixed;
+                display: none;
+                width: 90%;
+                height: 80%;
+                left: 5%;
+                top: 10%;
+                right: 5%;
+                bottom: 10%;
+                background-color: white;
+                overflow: auto;
+                box-shadow: 0px 0px 15px  black;
+            }
+            .personalize_content{
+                display: flex;
+                width: 100%;
+                height: 100%;
+                background-color: white;
+                position: absolute;
+                flex-direction: row;
+                align-content: stretch;
+            }
+            .per_block_left{
+                background-color: #f4f4f4;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+            }
+            .per_block_right{
+                background-color: white;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+            }
+            .right_row{
+                background-color: white;
+                /* flex-grow: 1; */
+                width: 100%;
+            }
+            .per_close{
+                display: flex;
+                justify-content: flex-end;
+                background-color: white;
+            }
+            .close_img{
+                width: 8%;
+                height: auto;
+                background-color: white;
+            }
+
+            .per_title{
+                display: flex;
+                justify-content: flex-start;
+                margin-left: 10%;
+                margin-right: 10%;
+                background-color: white;
+            }
+            .per_edit_text{
+                width: 80%;
+                font-size: large;
+                padding: 20px 12px;
+                /* margin: 8px 0; */
+                margin-left: 10%;
+                margin-right: 10%;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+            .per_title_add_emoji{
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+            .per_emoji_block{
+                margin-left: 10%;
+                margin-right: 10%;
+                padding-left: 10%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                overflow-x: scroll;
+            }
+            .per_button_save{
+                width: 80%;
+                margin-top: 10%;
+                font-size: large;
+                padding: 20px 12px;
+                /* margin: 8px 0; */
+                margin-left: 10%;
+                margin-right: 10%;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                background-color: black;
+                color: white;
+            }
+            .per_emoji_image{
+                width: 10%;
+                height: auto;
+            }
+            .per_button_save:hover {
+                background-color: grey;
+            }
+
+            .per_featured_img{
+                width: 50%;
+                margin: 25%;
+            }
+            
+        </style>
+        <body>
+            <button id =personalize_button  type="button">click</button>
+            <div id = personalize_block class=personalize_body>
+                <div class = personalize_content>
+                    <div class=per_block_left>
+                        <input id =id_featured_block class = per_featured_img type="image" name="close_button" src="pd1.jpg" alt="text">  
+                    </div>
+                    <div class=per_block_right>
+                        <div class=right_row>
+                            <div class=per_close>
+                                <input id =close_block class = close_img type="image" name="close_button" src="close.png" alt="text">  
+                            </div>
+                        </div>
+                        <div class=right_row>
+                            <div class=per_title>
+                                <h1 class = head_title>Personalize your Product.</h3>
+                            </div>
+                        </div>
+                        <div class=right_row>
+                            <input type="text" class ="per_edit_text" id="id_per_text" placeholder="">
+                        </div>
+                        <div class=right_row>
+                            <h5 class = per_title_add_emoji>Add Emoji</h5>
+                        </div>
+                        <div class=right_row>
+                            <div class=per_emoji_block>
+                                <input id =id_emoji class = per_emoji_image type="image" name="close_button" src="emo_01.png" alt="text">  
+                                <input id =id_emoji class = per_emoji_image type="image" name="close_button" src="emo_02.png" alt="text">  
+                                <input id =id_emoji class = per_emoji_image type="image" name="close_button" src="emo_03.png" alt="text">  
+                                <input id =id_emoji class = per_emoji_image type="image" name="close_button" src="emo_04.png" alt="text">  
+                                <input id =id_emoji class = per_emoji_image type="image" name="close_button" src="emo_05.png" alt="text">  
+                                <input id =id_emoji class = per_emoji_image type="image" name="close_button" src="emo_06.png" alt="text">  
+                                <input id =id_emoji class = per_emoji_image type="image" name="close_button" src="emo_07.png" alt="text">  
+                                <input id =id_emoji class = per_emoji_image type="image" name="close_button" src="emo_08.png" alt="text">  
+                            </div>
+                        </div>
+                        <div class=right_row>
+                            <button id =id_save_button  class =per_button_save type="Save">SAVE</button>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+    
+            <script>
+                var mod_box = document.getElementById("personalize_block")
+                var per_button = document.getElementById("personalize_button")
+                var close_button = document.getElementById("close_block")
+
+    
+                per_button.onclick = function(){
+                    mod_box.style.display = "block"
+                }
+                close_button.onclick = function(){
+                    mod_box.style.display = "none"
+                }
+            </script>
+        </body>
+    </head>
+</html>
